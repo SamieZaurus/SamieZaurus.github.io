@@ -6,8 +6,9 @@ a{
 }
 .right-nav .links{
     line-height: 75px;
-    font-weight: 500;
+    font-weight: 600;
     display: inline-block;
+    font-size: 1.1em;
 }
 
 .links a{
@@ -99,6 +100,9 @@ a{
     color: #1B0042;
     font-weight: 900;
 }
+.capital-6{
+    color: #3145E3;
+}
 .title{
     height: 75px;
     position: relative;
@@ -117,23 +121,25 @@ a{
 
 }
 .title h3{
-    font-weight: 400;
+    font-weight: 600;
     display:inline;
-    font-size: 1.4em;
+    font-size: 4vh;
     font-family: 'Nanum Gothic', sans-serif;
 
 }
 .header{
     position: fixed;
     width: 100%;
-    background-color:#ffffff;
+    background: rgba(255,255,255,0.9);
     height: 75px;
-    border-bottom: 1px solid #9C83C1;
+    border-bottom: 5px solid #B5B145;
     
 }
 
 body{
-    background-color: #ffffff;
+    height: 100vh;
+    width: 100vh;
+    background: linear-gradient(-30deg,#5A368F , #00002B);
     font-family: 'Quicksand', sans-serif;
 
 }
@@ -165,8 +171,17 @@ body{
         position: fixed;
         height: 100vh;
         width: 100vw;
-        background-color: #1B0042;
+        background-color: #efefee;
         left: 100vw;
+    }
+    .small-links{
+        margin: 55px 10px 0px;
+    }
+    .small-links a{
+        font-size: 1.4em;
+        padding: 20px;
+        font-weight: 900;
+        display: block;
     }
     .title{
         margin: 0px;
