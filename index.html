@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="responsive.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var isOpen = false;
+            function setUnderline(pos){
+                var width = 75;
+                var elem = document.getElementById("selector");
+                var amount = (pos * width) + "px";
+                elem.style.marginLeft = amount;
+
+            }
+            function simpleHandler(){
+                var arrow = document.getElementById("arrow");
+                var content = document.getElementById("small-nav-content")
+                if(!isOpen){
+                    arrow.style.transform = "rotate (180deg)"
+                    content.style.left = "0";
+                    arrow.style.left = "20px";
+                    isOpen = true
+                }
+                else{
+                    arrow.style.transform = "rotate (0deg)"
+                    content.style.left = "100vw";
+                    arrow.style.left = "calc(100vw - 50px)";
+                    isOpen = false;
+                }
+                console.log(isOpen);
+                
+            }
+        </script>
+    </head>
+    <body>
+        <div class="row header">
+            <div class="col-5">
+                <div class="title">
+                    <a><h3><span class="capital-1">S</span>amuel Middendorp <span class="infinity-logo">∞</span></h3><div class="title-sub">Endless Possibilities</div></a>
+                    
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="right-nav">
+                    <div class="links">
+                        <a class="home-link" onClick="setUnderline(0)"><span class="capital-1">H</span>ome</a>
+                        <a class="about-link" onClick="setUnderline(1)"><span class="capital-2">A</span>bout</a>
+                        <a class="projects-link" onClick="setUnderline(2)"><span class="capital-3">P</span>rojects</a>
+                        <a class="portfolio-link" onClick="setUnderline(3)"><span class="capital-4">P</span>ortfolio</a>
+                        <a class="contact-link" onClick="setUnderline(4)"><span class="capital-5">C</span>ontact</a>
+                        <div id="selector" class="underline-selector"> </div>
+                    </div>
+                    
+                </div>
+                
+            </div>    
+        </div> 
+        <div class="small-nav"><i id="arrow" onClick="simpleHandler()" class="fa fa-chevron-circle-left"></i>
+            <div id="small-nav-content" class="small-nav-content">
+                <div class="small-links">
+
+                            <a class="home-link"><span class="capital-1">H</span>ome</a>
+                            <a class="about-link" ><span class="capital-2">A</span>bout</a>
+                            <a class="projects-link" ><span class="capital-3">P</span>rojects</a>
+                            <a class="portfolio-link"><span class="capital-4">P</span>ortfolio</a>
+                            <a class="contact-link"><span class="capital-5">C</span>ontact</a>
+                            
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- chrome bug-->
+    <script> </script>
+</html>
