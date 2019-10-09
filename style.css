@@ -77,7 +77,6 @@ a{
 
     left: 0px;
     top: 0px;
-    width: auto;
     transition: opacity 0.5s linear;
 }
 .capital-1{
@@ -108,12 +107,12 @@ a{
     
 
 }
-.title a:hover .infinity-logo{
+.title h3:hover .infinity-logo{
 
     animation: full-rotation 0.5s linear;
 
 }
-.title a:hover .title-sub{
+.title h3:hover ~ .title-sub{
     opacity: 1;
 
 }
@@ -160,6 +159,7 @@ body{
         left: calc(100vw - 40px);
         font-size: 25px;
         color: #D2A8FF;
+        display: inline-block;
     }
     .small-nav-content{
         position: fixed;
