@@ -7,7 +7,10 @@
     clear: both;
     display: table;
 }
-
+.border{
+  border: 10px solid rgba(255, 255, 0, 0.0);
+  border-top: 20px solid rgba(255, 255, 0, 0.0);
+}
   
 @media(min-width: 760px) {
     /* For desktop: */
