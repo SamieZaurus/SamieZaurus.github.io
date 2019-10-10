@@ -16,4 +16,15 @@
         opacity: 1;
     }
 }
+@keyframes move-right-left{
+    0%{
+        left: -20px;
+    }
+    50%{
+        left: 0px;
+    }
+    100%{
+        left: -20px;
+    }
+}
   

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Contrail+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import 'keyframes.css';
 
 a{
@@ -56,18 +58,21 @@ a{
     height: 100%;
 }
 
-.content{
+.main-content{
+
     padding: 20px;
     border-radius: 3px;
     position: relative;
-    margin: 0px auto 0px auto;
+
     z-index: -1;
     background-color: rgba(255,255,255,0.9);
 }
 .infinity-logo{
-    font-weight: 1000;
     color: #5A368F;
     display: inline-block;
+    position: relative;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
 
 }
 .right-nav{
@@ -79,13 +84,14 @@ a{
     opacity: 0;
     position: relative;
 
-    left: 0px;
-    top: 0px;
+    left: 10px;
+    top: -10px;
     transition: opacity 0.5s linear;
 }
 .capital-1{
     color: #5A368F;
     font-weight: 900;
+    font-size: 1.4em;
 }
 .capital-2{
     color: #9C83C1;
@@ -110,7 +116,7 @@ a{
     height: 75px;
     position: relative;
     width: auto;
-    padding: 15px;
+    padding-left: 10px;
     
 
 }
@@ -123,32 +129,50 @@ a{
     opacity: 1;
 
 }
+.pointer{
+    position: relative;
+    top: -10px;
+    left: -20px;
+    animation: move-right-left 1s ease-in-out 3;
+}
 .title h3{
-    font-weight: 400;
+    font-weight: 200;
     display:inline;
-    font-size: 1.7em;
-    font-family: 'Nanum Gothic', sans-serif;
+    position: relative;
+    font-size: 1.9em;
+    font-family: 'Contrail One', cursive;
+    
 
 }
 .header{
     position: fixed;
     width: 100%;
+    z-index: 2;
     background: rgba(255,255,255,0.9);
     height: 75px;
     border-bottom: 0px solid #B5B145;
     
 }
-
+.box{
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 10px;
+}
 body{
     height: 100vh;
     background: rgb(2,0,36);
     background-image: linear-gradient(-30deg,#5A368F , #00002B);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Quicksand', sans-serif;
 
 }
 .content-wrapper{
     position: relative;
-    top: 75px;
+    top: 100px;
+    max-width: 1000px;
+    margin: 0px auto 0px auto;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -160,20 +184,25 @@ body{
 }
 @media(max-width: 760px) {
     /* mobile */
+    .box{
+        width: 75%;
+        margin: 0px auto 0px auto;
+    }
     .small-nav{
         display: block;
         position: fixed;
-
+        z-index: 3;
     }
     .title h3{
-        font-weight: 400;
+        font-weight: 200;
         display:inline;
-        font-size: 1.5em;
-        font-family: 'Nanum Gothic', sans-serif;
+        position: relative;
+        font-size: 1.7em;
+        font-family: 'Contrail One', cursive;
     
     }
     .small-nav i{
-        z-index: 2;
+        z-index: inherit;
         transition: 0.4s left ease-out 0.1s, 0.2s transform ease-out 0.6s;
         position: fixed;
         top: 20px;
