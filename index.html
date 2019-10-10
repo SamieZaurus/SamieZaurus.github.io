@@ -48,7 +48,7 @@
             <div class="col-7">
                 <div class="right-nav">
                     <div class="links">
-                        <a class="home-link" onClick="setUnderline(0)"><span class="capital-6">H</span>ome</a>
+                        <a href="#About" class="home-link" onClick="setUnderline(0)"><span class="capital-6">H</span>ome</a>
                         <a class="about-link" onClick="setUnderline(1)"><span class="capital-6">A</span>bout</a>
                         <a class="projects-link" onClick="setUnderline(2)"><span class="capital-6">P</span>rojects</a>
                         <a class="portfolio-link" onClick="setUnderline(3)"><span class="capital-6">P</span>ortfolio</a>
@@ -64,7 +64,7 @@
             <div id="small-nav-content" class="small-nav-content">
                 <div class="small-links">
                             <hr>
-                            <a class="home-link"><span class="capital-6">H</span>ome</a>
+                            <a href="#About" onClick="simpleHandler()" class="home-link"><span class="capital-6">H</span>ome</a>
                             <hr>
                             <a class="about-link" ><span class="capital-6">A</span>bout</a>
                             <hr>
@@ -77,7 +77,8 @@
                 </div>
             </div>
         </div>
-        <div class="section group">
+    
+        <div id="Home" class="section group">
                 <div class="content-wrapper">
                     <div class="section group">
                         <div class="col col1">
@@ -135,7 +136,7 @@
                                     </div>
                                     </div>
             </div>
-            <div class="section group">
+            <div id="About" class="section group">
                     <div class="col col4">
                         <div class="content-block edges bg-white">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ut optio rerum exercitationem dolorem dicta eos id consectetur asperiores facere numquam omnis recusandae inventore pariatur, assumenda ipsam corporis. Voluptates, voluptate?
@@ -161,6 +162,29 @@
         </div>
             </div>
         </div>
+        <div class="footer">
+                <div class="section group">
+            <div class="col-6">
+            <div class="center">
+            Made from the ground up in 2019
+            </div>
+            </div>
+            <div class="col-6">
+            <div class="socials">
+                <div class="connect">
+                    Connect !
+                </div>
+                <a><img src="images/icons/github.svg"></a>
+                <a><img src="images/icons/linkedin.svg"></a>
+                <a><img src="images/icons/email.svg"></a>
+            </div>
+        </div>
+        <div class="back-to-top">
+        
+                <div class="clickable"><a href="#Home">Back to top</a><i class="fa fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
     </body>
     <!-- chrome bug-->
   
