@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Contrail+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 @import 'keyframes.css';
 
 a{
@@ -38,7 +39,7 @@ a{
     width: 45px;
     margin-left: 0px;
     height: 2px;
-    background-color: #7245B5;
+    background-color: #5A368F;
     transition: margin-left 0.3s ease-out;
 }
 .el1{
@@ -57,15 +58,51 @@ a{
     background-color: #BF2604;
     height: 100%;
 }
+.content-row{
+    position: relative;
+    top: 40px;
+}
+.bg-white{
+    background-color: #efefee;
+}
+.bg-purple{
+    background-color: #59368F;
 
+}
+.bg-pink{
+    background-color: #B936C2;
+    
+}
+.bg-lighter-pink{
+    background-color: #F1BFF5;
+    
+}
+.bg-yellow{
+    background-color: #C2A136;
+    
+}
 .main-content{
 
     padding: 20px;
-    border-radius: 3px;
-    position: relative;
 
-    z-index: -1;
-    background-color: rgba(255,255,255,0.9);
+ 
+    background-color: rgba(255,255,255,1);
+}
+.main-content2{
+
+    padding: 20px;
+    position: relative;
+    opacity: 0;
+    top: 30px;
+    animation: opacity-0-100 0.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+    background-color: rgba(255,255,255,1);
+}
+.main-content h2{
+    font-weight: 200;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Lobster', cursive;
 }
 .infinity-logo{
     color: #5A368F;
@@ -110,7 +147,7 @@ a{
     font-weight: 900;
 }
 .capital-6{
-    color: #3145E3;
+    color: #9769DB;
 }
 .title{
     height: 75px;
@@ -147,8 +184,9 @@ a{
 .header{
     position: fixed;
     width: 100%;
+    animation: opacity-0-100 0.5s ease-in-out;
     z-index: 2;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,1);
     height: 75px;
     border-bottom: 0px solid #B5B145;
     
@@ -156,8 +194,11 @@ a{
 .box{
     padding: 20px;
     width: 100%;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,1);
     border-radius: 10px;
+}
+.edges{
+    border-radius: 5px;
 }
 body{
     height: 100vh;
@@ -168,13 +209,24 @@ body{
     font-family: 'Quicksand', sans-serif;
 
 }
+.content-block{
+    padding: 20px;
+}
+.content-block-2{
+    padding: 20px;
+    background-color: #C2A136;
+}
 .content-wrapper{
     position: relative;
-    top: 100px;
+    top: 75px;
     max-width: 1000px;
+    height: calc(100vh - 75px);
+    opacity: 0;
     margin: 0px auto 0px auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    animation: opacity-0-100 0.5s ease-in-out 0.5s;
+    padding-right: 10px;;
+    animation-fill-mode: forwards;
 }
 .small-nav{
     display: none;
@@ -206,9 +258,10 @@ body{
         transition: 0.4s left ease-out 0.1s, 0.2s transform ease-out 0.6s;
         position: fixed;
         top: 20px;
-        left: calc(100vw - 40px);
+        left: calc(100vw - 35px);
         font-size: 25px;
-        color: #D2A8FF;
+        color: #8F8C36;
+        cursor: pointer;
         display: inline-block;
 
     }

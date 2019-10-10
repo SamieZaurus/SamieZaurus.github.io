@@ -27,4 +27,15 @@
         left: -20px;
     }
 }
+@keyframes side-menu-move{
+    0%{
+        left: calc(100vw - 40px)
+    }
+    50%{
+        left: calc(100vw - 20px);
+    }
+    100%{
+        left: calc(100vw - 40px)
+    }
+}
   

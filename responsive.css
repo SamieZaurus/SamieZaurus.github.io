@@ -7,14 +7,43 @@
     clear: both;
     display: table;
 }
-.row{
-  width: 100vw;
-}
 .border{
   border: 10px solid rgba(255, 255, 0, 0.0);
   border-top: 20px solid rgba(255, 255, 0, 0.0);
 }
-  
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ margin: 0px;}
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+.margin-top{
+  margin-top: 1%;
+}
+
+.col{
+  display: block;
+  float: left;
+  margin: 1% 0% 0% 1%;
+}
+.col1{
+  width: 100%;
+}
+.col4{
+  width: 24.25%;
+}
+.col:first-child { margin-left: 0; }
+.col2{
+  width: 49.5%;
+}
+@media(max-width: 760px){
+  .col { margin: 3% 0 0% 0%; }
+  .col2{ width: 100%; }
+  .col4{ width: 100%; }
+}
 @media(min-width: 760px) {
     /* For desktop: */
     .col-1 {width: 8.33%;}
