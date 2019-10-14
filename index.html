@@ -9,6 +9,43 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
+            function load(){
+                setDelays();
+            }
+            function setDelays(){
+                var baseDelay = 2.5;
+                var iterator = 1;
+                var delayStep = 0.2;
+                var animatedElemes = document.getElementsByClassName('main-fade-in');
+                for(var i = 0; i < animatedElemes.length; i++)
+                {
+                    var element = animatedElemes[i];
+                    element.style.animationDelay = (baseDelay + (iterator * delayStep)) + "s";
+                    iterator ++;
+                }
+                   
+            }
+            function closeModal(){
+                var elem = document.getElementById('popup-info');
+                elem.style.opacity = "0";
+                
+            }
+            function openModal(title, content, linktext, href){
+                var elem = document.getElementById('popup-info');
+                var doc_title = document.getElementById('modal-title');
+                var doc_content = document.getElementById('modal-content');
+                var doc_link = document.getElementById('modal-link')
+                doc_content.innerHTML = content;
+                doc_title.innerHTML = title;
+                doc_link.innerHTML = "";
+                if(linktext != null){
+                    var a = '<a target="_blank" href="' + href + '">' + linktext + "</a>";
+                    doc_link.innerHTML = a; 
+                }
+
+                elem.style.opacity = "1";
+
+            }
             var isOpen = false;
             function setUnderline(pos){
                 var width = 75;
@@ -35,6 +72,7 @@
                 console.log(isOpen);
                 
             }
+            window.onload = load;
         </script>
     </head>
     <body>
@@ -77,31 +115,51 @@
                 </div>
             </div>
         </div>
-    
+        <div id="popup-info">
+                <a class="modal-close" onClick="closeModal()">Close x</a>
+                <div id="modal-title" class="modal-title">Placeholder</div>
+            <div id="modal-content" id="modal-content">
+                    placeholder content
+                </div>
+                <div id="modal-link">
+
+                </div>
+        </div>
         <div id="Home" class="section group">
                 <div class="content-wrapper">
                     <div class="section group">
                         <div class="col col1">
                         <div class="main-content edges">
                         <h2>
-                            <span class="fade-in">Welcome</span> <img id="landing-plane-img" src="images/landing.png" style="width: 128px; height: 128px;">
+                            <span class="fade-in">Welcome</span> <img id="landing-plane-img" src="images/landing2.png" style="width: 256px; height: 256px;">
                         </h2>
                         <p class="main-fade-in">
                             <span class="fly-in-first">T</span>hank you for landing on this page !
                         </p>
                         <p class="main-fade-in left-align"> 
                             <img class="portret" src="images/portret.png">
-                            My name is Samuel Middendorp, I do cool full stack stuff with Autodesk Forge !
+                            My name is Samuel Middendorp, I do full stack stuff and love game design!
                         </p>
+                        <br/>
+                        <hr>
+                        <p class="main-fade-in left-align">
+                            ProTip: clicking any of the underlined sections of text will fill a popup box with additional 
+                            <span class="add-info-clickable cursor-pointer" onClick="openModal('Additional Info', 'You got it ! you can now close this box');">info</span> !
+                            
+                        </p>
+                        
                         <p class="main-fade-in left-align">
                             As of september 2019 I am in my 
-                            <span class="add-info-clickable">third year
-                                <span class="add-info">Studying at Hogeschool Rotterdam</span>
-                            </span> of software development, I am doing an internship at Dura Vermeer. I do 
-                            <span class="add-info-clickable">Forge development
-                                <span class="add-info">Extra info here 2!</span></span>, currently designing and developing a web app that displays 
-                            <span class="add-info-clickable">BIM
-                                <span class="add-info">Extra info here 3!</span></span> models.
+                            <span class="add-info-clickable cursor-pointer" onClick="openModal('Studies', 'Currently studying at Hogeschool Rotterdam', 'Hogeschool Rotterdam', 'https://www.hogeschoolrotterdam.nl')" >third year
+               
+                            </span> of software development and I am doing an internship at Dura Vermeer. I do 
+                            <span class="add-info-clickable cursor-pointer" onClick="openModal('Forge', 'Forge is a selection of Autodesk APIS used to interact with Autodesk services', 'Forge' , 'https://forge.autodesk.com/')">Forge development
+                                </span>, currently designing and developing a web app that displays 
+                            <span class="add-info-clickable cursor-pointer" onClick="openModal('BIM', 'Building Information Modeling is the digital representation of buildings infrastructure plans, BIM is essential for any modern building company', 'BIM' , 'https://www.autodesk.com/solutions/bim')">BIM
+                               </span> models.
+                        </p>
+                        <p class="main-fade-in left-align">
+                            This website is my first try at front-end work so any tips are very welcome. If you're interested you can check out any of the links up top to get more info about me and what I do !
                         </p>
                     </div>
                     </div>

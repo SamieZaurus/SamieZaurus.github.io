@@ -200,7 +200,7 @@ a{
 }
 .main-fade-in{
     opacity: 0;
-    animation: opacity-0-100 0.2s linear 2.7s;
+    animation: opacity-0-100 0.2s linear;
     animation-fill-mode: forwards;
     text-align: center;
 }
@@ -212,9 +212,6 @@ a{
     font-size: 3.5em;
     text-align: left;
     font-family: 'Dancing Script', cursive;
-}
-.main-content p{
-
 }
 .infinity-logo{
     color: #5A368F;
@@ -331,6 +328,9 @@ body{
     font-family: 'Quicksand', sans-serif;
 
 }
+.cursor-pointer{
+    cursor: pointer;
+}
 .content-block{
     padding: 8px;
 }
@@ -339,24 +339,48 @@ body{
     background-color: #C2A136;
 }
 .add-info-clickable{
+    width: auto;
     color:#48DB6A;
     border-bottom: 3px solid #F2BFF5;
     display: inline-block;
 }
 .add-info-clickable:hover .add-info{
 
-    opacity: 1;
 }
-.add-info{
-    background-color: #48DB6A;
-    color: #efefee;
-    
-    padding: 8px;
-    opacity: 0;
-    border-radius: 8px;
+#popup-info{
+    transition: all 0.4s ease-out;
     position: fixed;
+    opacity: 0;
+    color: #efefee;
     left: 8px;
-    top: 128px;
+    top: 80px;
+    border-radius: 5px;
+    margin: 0px auto 0px auto;
+    background-color: rgba(41, 21, 56, 0.9);
+    width: 304px;
+    min-height: 144px;
+    z-index: 5;
+}
+#modal-link{
+    padding: 8px;
+}
+#modal-link a{
+    padding: 8px;
+    color: #48DB6A;
+
+}
+#popup-info .modal-close{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #efefee;
+}
+#popup-info #modal-content{
+    padding: 8px;
+}
+#popup-info #modal-title{
+    font-size: 1.1em;
+    padding: 8px;
 }
 .content-wrapper{
     position: relative;

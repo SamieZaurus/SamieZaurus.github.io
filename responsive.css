@@ -21,13 +21,13 @@
 	margin: 0px;
 }
 .margin-top{
-  margin-top: 1%;
+  margin-top: 8px;
 }
 
 .col{
   display: block;
   float: left;
-  margin: 1% 0% 0% 1%;
+  margin: 8px 0% 0% 1%;
 }
 .col1{
   width: 100%;
@@ -40,7 +40,7 @@
   width: 49.5%;
 }
 @media(max-width: 760px){
-  .col { margin: 3% 0 0% 0%; }
+  .col { margin: 8px 0 0% 0%; }
   .col2{ width: 100%; }
   .col4{ width: 100%; }
 }
