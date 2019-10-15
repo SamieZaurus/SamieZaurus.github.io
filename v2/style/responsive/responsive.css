@@ -1,0 +1,78 @@
+.aside{
+
+    width: 25%;
+    height: 100%;
+    float: left;
+
+}
+.main{
+
+    width: 75%;
+    height: 100%;
+
+    float: right;
+}
+.container-fluid{
+
+    width: 100%; 
+    height: 100%;
+      
+    background-color: #0378A6;
+}
+.row3-3{
+
+    width: 100%;
+    height: calc((100% / 3) * 3);
+
+}
+.row2-3{
+
+    width: 100%;
+    height: calc((100% / 3) * 2);
+
+}
+.row1-3{
+
+    width: 100%;
+    height: calc((100% / 3) * 1);
+
+}
+.row1-3:after{
+    display: table;
+    clear: both;
+    content: '';
+}
+.row2-3:after{
+    display: table;
+    clear: both;
+    content: '';
+}
+.row3-3:after{
+    display: table;
+    clear: both;
+    content: '';
+}
+.col1-3{    
+    
+    width: calc((100% / 3) * 1);
+    height: 100%;
+    float: left;
+
+}
+.col2-3{
+
+    width: calc((100% / 3) * 2);
+    height: 100%;
+    float: left;
+}
+.col3-3{
+
+    width: calc((100% / 3) * 3);
+    height: 100%;
+    float: left;
+}
+@media(max-width: 1250px){
+    body{
+        font-size: 1.25vw;
+    }
+}

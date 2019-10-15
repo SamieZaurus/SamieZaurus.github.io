@@ -1,0 +1,96 @@
+@import 'globals.css';
+@import 'responsive/responsive.css';
+@import 'fonts.css';
+@import 'animations.css';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+#nav{
+    transition: all 0.2s ease-out;
+    background-color: #333333;
+    background-image: url('../images/tekening2.png');
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+ 
+}
+#main-content{
+    transition: all 0.2s ease-out;
+    background-color: #888888;
+}
+.header-info{
+    background-color: #252525;
+    padding: 8px;
+    
+}
+.header-info h2{
+    z-index: 3;
+    padding-bottom: 8px;
+    font-family: 'Poiret One', cursive;
+}
+
+.header-photo{
+    position: absolute;
+    top: 1%;
+    left: 14%;
+    width: 10%;
+    height: 10%;
+    z-index: 2;
+}
+.header-photo img{
+    z-index: 2;
+    width: 75%;
+    float: right;
+    position: relative;
+}
+.subtext{
+    padding-left: 8px;
+    padding-top: 4px;
+    background-color: #252525;
+}
+.links a:hover{
+    color: #252525;
+    font-weight: 600;
+    background-color: coral;
+    border-radius: 24px;
+}
+.links a{
+    transition: all 0.2s ease-out;
+    display: block;
+    margin-bottom: 8px;
+    background-color: #252525;
+    padding: 8px;
+}
+.links a:hover{
+    padding-left: 24px;
+    color: #252525;
+    font-weight: 600;
+    background-color: coral;
+    border-radius: 20px;
+}
+.footer{
+    padding: 8px;
+    height: 100%;
+    background-color: #252525;
+}
+#nav-toggler{
+    position: absolute;
+    color: #efefef;
+    background-color: #252525;
+    bottom: 0px;
+    left: 25%;
+    font-size: 2em;
+    transition: all 0.2s ease-out;
+}
+#nav-toggler i{
+  
+    padding: 8px;
+
+}
+#nav-toggler:hover{
+
+    color: #252525;
+    font-weight: 600;
+    background-color: coral;
+    border-radius: 48px;
+
+}

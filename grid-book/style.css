@@ -1,0 +1,93 @@
+
+
+/*globals */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+}
+.blue{
+    background-color: #fa3b3b;
+}
+.l-wrap{
+    width: 960px;
+    height: 960px;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+.row{
+    width: 100%;
+    height: calc(100% / 3);
+}
+.row:after{
+    display: table;
+    clear: both;
+    content: '';
+}
+.grid-item-1{
+    width: calc(100% / 3);
+    height: 100%;
+    float: left;
+}
+.grid-item-2{
+    width: calc((100% / 3) * 2);
+    height: 100%;
+    float: left;
+}
+.grid-item-3{
+    width: 100%;
+    float: left;
+    height: 100%;
+}
+.grid-item:last-child {
+    margin-right: 0;
+    float: right;
+}
+.header{
+    height: 16%;
+    width: 100%;
+    margin-bottom: 1%;
+}
+.portret{
+    height: 56%;
+    width: 72%;
+}
+.portret img{
+    width: 160px;
+    height: 160px;
+    margin-left: 14%;
+    margin-top: 4%;
+}
+.footer{
+    margin-top: 28%;
+    height: 16%;
+    width: 100%;
+}
+.content-header{
+    width: 100%;
+    margin-bottom: 16%;
+    height: 16%;   
+}
+.content-body{
+    width: 100%;
+    margin-top: 4%;
+    height: 32%;
+}
