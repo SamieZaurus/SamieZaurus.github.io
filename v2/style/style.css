@@ -23,6 +23,7 @@
     
 }
 .header-info h2{
+    font-family: 'Lobster', cursive;
     z-index: 3;
     font-size: 1.4em;
     padding-bottom: 8px;
