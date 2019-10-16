@@ -25,7 +25,7 @@
 .header-info h2{
     z-index: 3;
     font-size: 1.4em;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif !important;
     padding-bottom: 8px;
 }
 
@@ -90,7 +90,7 @@
 #nav-toggler:hover{
 
     color: #252525;
-    font-weight: 600;
+    font-weight: 400;
     background-color: coral;
     border-radius: 48px;
 
