@@ -3,6 +3,10 @@
 let navToggled = false;
 
 
+function load(){
+    alert(window.innerHeight);
+}
+window.onload = load();
 function toggleNav(){
     console.log("debug");
     let nav  = document.getElementById('nav');
