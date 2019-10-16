@@ -3,7 +3,8 @@
     width: 25%;
     height: 100%;
     float: left;
-
+    overflow: hidden;
+    position: fixed;
 }
 .main{
 
@@ -71,9 +72,23 @@
     height: 100%;
     float: left;
 }
-
 @media(max-width: 1250px){
     body{
         font-size: 1.25vw;
+    }
+}
+@media(max-width: 765px){
+    body{
+        font-size: 2vw;
+    }
+    .aside{
+        font-size: 4vw;
+        position: fixed;
+        width: 100%;
+       
+    }
+    .main{
+        width: 100%;
+       
     }
 }
