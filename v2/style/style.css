@@ -24,8 +24,8 @@
 }
 .header-info h2{
     z-index: 3;
+    font-size: 1.4em;
     padding-bottom: 8px;
-    font-family: 'Poiret One', cursive !important;
 }
 
 .header-photo{
