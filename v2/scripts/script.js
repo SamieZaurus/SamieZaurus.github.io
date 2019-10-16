@@ -3,10 +3,13 @@
 let navToggled = false;
 
 
-function load(){
-    alert(window.innerHeight);
+function setFontSize(){
+    let body = document.getElementsByTagName('div')[0];
+    let width = window.innerWidth;
+    if(width < 1250){
+        body.style.fontSize = (width * 0.0125) + 'px';
+    }
 }
-window.onload = load();
 function toggleNav(){
     console.log("debug");
     let nav  = document.getElementById('nav');

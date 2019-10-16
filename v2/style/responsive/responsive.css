@@ -71,13 +71,9 @@
     height: 100%;
     float: left;
 }
+
 @media(max-width: 1250px){
     body{
-        font-size: 1vw;
-    }
-}
-@media(max-width: 768px){
-    body{
-        font-size: 9px;
+        font-size: 1.25vw;
     }
 }
