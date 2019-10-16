@@ -76,3 +76,8 @@
         font-size: 1.25vw;
     }
 }
+@media(max-width: 768px){
+    body{
+        font-size: 9px;
+    }
+}
