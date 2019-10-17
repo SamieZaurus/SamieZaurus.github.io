@@ -72,11 +72,28 @@
     height: 100%;
     float: left;
 }
-@media(max-width: 1250px){
+@media(min-width: 765px){
     body{
         font-size: 1.25vw;
     }
+    .aside{
+        width: 25%;
+    }
+    .socials img{
+        height: initial
+    }
+    
 }
+@media(min-width: 1200px){
+    body{
+        font-size: 1vw;
+    }
+    .socials img{
+        height: 3vh;
+    }
+    
+}
+
 @media(max-width: 765px){
     body{
         font-size: 2vw;
@@ -86,6 +103,12 @@
         position: fixed;
         width: 100%;
        
+    }
+    #nav-toggler-mobile{
+        display: initial !important;
+    }
+    #nav-toggler{
+        display: none !important;
     }
     .main{
         width: 100%;

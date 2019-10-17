@@ -7,6 +7,7 @@
 #nav{
     transition: all 0.2s ease-out;
     background-color: #333333;
+    color: #efefef;
     background-image: url('../images/tekening2.png');
     background-position: center top;
     background-size: contain;
@@ -15,7 +16,9 @@
 }
 #main-content{
     transition: all 0.2s ease-out;
-    background-color: #888888;
+    background-color: #efefef;
+    font-family: 'Lato', sans-serif;
+    color: #333333;
 }
 .header-info{
     background-color: #252525;
@@ -43,8 +46,9 @@
     position: relative;
 }
 .subtext{
-    padding-left: 8px;
-    padding-top: 4px;
+    padding: 5%;
+    padding-bottom: 2.5%;
+    padding-top: 2.5%;
     background-color: #252525;
 }
 .links a:hover{
@@ -56,9 +60,9 @@
 .links a{
     transition: all 0.2s ease-out;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 5%;
     background-color: #252525;
-    padding: 8px;
+    padding: 5%;
 }
 .links a:hover{
     padding-left: 24px;
@@ -72,32 +76,47 @@
     height: 100%;
     background-color: #252525;
 }
+.socials{
+    margin-top: 0.5%;
+}
+.socials img{
+    transition: all 0.2s ease-out;
+    background-color: #efefef;
+    padding: 1%;
+    border-radius: 4px;
+}
+.socials img:hover{
+    transform: scale(2);
+    background-color: #b94d3e;
+}
+#content{
+    margin: 1%;
+    margin-bottom: 0px;
+    background-color: #FFF;
+    padding: 4%;
+    padding-top: 2%;
+    min-height: calc(100% - 12px);
+}
 #nav-toggler{
-    position: absolute;
-    color: #efefef;
-    background-color: #252525;
+    color: #b94d3e;
+    position: fixed;
     bottom: 0px;
     left: 25%;
     font-size: 2em;
     transition: all 0.2s ease-out;
-    display: none;
+
 }
 #nav-toggler i{
   
     padding: 8px;
 
 }
-#nav-toggler:hover{
-
-    color: #252525;
-    font-weight: 400;
-    background-color: coral;
-    border-radius: 48px;
-
-}
 #nav-toggler-mobile{
-    position: absolute;
+    color: #b94d3e;
+    display: none;
+    position: fixed;
     bottom: 1.5%;
     right: 5%;
     font-size: 4em;
+    transition: all 0.4s ease-out;
 }

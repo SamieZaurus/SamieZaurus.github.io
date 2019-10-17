@@ -19,7 +19,7 @@ function toggleNav(){
         navToggled = true;
         return;
     }  
-    nav.style.width = '100%';
+    nav.style.width = '25%';
     mainContent.style.width = '75%';   
     toggler.style.left = '25%';
     toggler_arrow.style.transform = 'rotate(0deg)'
@@ -30,7 +30,7 @@ function toggleNav(){
 
 }
 function toggleNavMobile(){
-    console.log("debug");
+    console.log("debug2");
     let nav  = document.getElementById('nav');
     let mainContent = document.getElementById('main-content');
     let toggler = document.getElementById('nav-toggler-mobile');
@@ -39,14 +39,16 @@ function toggleNavMobile(){
     if(!navToggled){
         nav.style.width = '0%';
         mainContent.style.width = '100%';  
-        toggler.style.left = '0px'
+        toggler.style.left = '5%'
+        toggler.style.right = '';
         toggler_arrow.style.transform = 'rotate(180deg)'
         navToggled = true;
         return;
     }  
     nav.style.width = '100%';
     mainContent.style.width = '75%';   
-    toggler.style.left = '25%';
+    toggler.style.left = '';
+    toggler.style.right = '5%';
     toggler_arrow.style.transform = 'rotate(0deg)'
     navToggled = false;
 
