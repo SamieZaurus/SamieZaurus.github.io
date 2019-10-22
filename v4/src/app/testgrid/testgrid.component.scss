@@ -1,0 +1,40 @@
+.test-grid-container{
+    height: 800px;
+    width: 1600px;
+    grid-template-columns: auto 1fr;
+    display: grid;
+    justify-self: center;
+   
+}
+.test-grid-box{
+    min-width: 200px;
+    margin: 12px;
+    text-align: center;
+    padding: 12px;
+    background-color: #fd2de1;
+    grid-column: 1/2;
+}
+.test-grid-box:nth-child(2){
+    background-color: #2d8efd;
+}
+.test-grid-box:nth-child(3){
+    background-color: #2dfd2d;
+}
+.test-grid-box:nth-child(4){
+    background-color: #cc3e25;
+}
+// .test-grid-box:active{
+//     grid-row: 1/4;
+//     grid-column: 2/3;
+//     transform: scale(0.1);
+//     animation: blow-up 0.4s ease-out;
+//     animation-fill-mode: forwards;
+// }
+@keyframes blow-up{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

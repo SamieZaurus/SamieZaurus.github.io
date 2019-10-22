@@ -1,0 +1,45 @@
+@keyframes up-down{
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: -10px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+@keyframes on-off{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes color-change{
+    0%{
+        color: #cccccc;
+    }
+    20%{
+        color: #1A3DE8
+    }
+    40%{
+        color: #29FFBF
+    }
+    60%{
+        color: #96E81A
+    }
+    80%{
+        color: #FFB91C
+    }
+    100%{
+        color: #1CFF2E;
+    }
+}
