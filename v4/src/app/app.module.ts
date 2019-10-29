@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { TestgridComponent } from './testgrid/testgrid.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ForgeViewerScriptService } from './services/forgeviewerscript.service';
+import { DuraViewerComponent } from './dura-viewer/dura-viewer.component';
+import { BestellenBimComponent } from './bestellen-bim/bestellen-bim.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,15 @@ import { ProjectsComponent } from './projects/projects.component';
     FooterComponent,
     AboutComponent,
     TestgridComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    DuraViewerComponent,
+    BestellenBimComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ForgeViewerScriptService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

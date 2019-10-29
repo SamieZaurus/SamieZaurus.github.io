@@ -4,12 +4,13 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { TestgridComponent } from './testgrid/testgrid.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { BestellenBimComponent } from './bestellen-bim/bestellen-bim.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: BestellenBimComponent
   },
   {
     path: 'about',
@@ -23,6 +24,7 @@ const routes: Routes = [
     path: 'projects',
     component: ProjectsComponent
   }
+
 
 ];
 
