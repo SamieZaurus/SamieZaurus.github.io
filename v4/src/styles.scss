@@ -22,7 +22,7 @@ body{
     display: grid;
     height: 100%;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr max-content 1fr;
     align-items: start;
 }
 .grid-container2{

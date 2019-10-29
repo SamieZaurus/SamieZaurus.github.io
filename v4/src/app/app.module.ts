@@ -8,6 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { TestgridComponent } from './testgrid/testgrid.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TestgridComponent } from './testgrid/testgrid.component';
     NavComponent,
     FooterComponent,
     AboutComponent,
-    TestgridComponent
+    TestgridComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

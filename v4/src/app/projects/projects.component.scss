@@ -1,0 +1,38 @@
+.projects-container {
+  max-width: 1200px;
+  margin-top: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+.projects {
+
+  display: grid;
+  margin-left: 16px; 
+  margin-right: 16px;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, 250px);
+  justify-content: center;
+  grid-auto-flow: dense;
+
+
+}
+.projects-item {
+  padding: 8px;
+  border-radius: 8px;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #3836A3;
+  background-size: 20px 20px;
+}
+.project-content{
+    background-color: #777777;
+    position: absolute;
+    min-width: 320px;
+    max-width: 1500px;
+    transform-origin: top left;
+    transform: scale(0.5);
+}
