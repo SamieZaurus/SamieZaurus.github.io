@@ -1,0 +1,45 @@
+.projectV2wrapper{
+    display: grid;
+    height: 100%;
+    padding-top: 0vh;
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: 3fr 8fr 1fr;
+    h1{
+        color: #A3368D;
+    }
+}
+.side-nav-main h5{
+
+    font-size: 1.4em;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+
+}
+.side-nav-main{
+    padding-bottom: 1em;
+    border-bottom: 2px solid #222222;
+}
+.side-nav-main:hover li{
+    display: block;
+}
+.side-nav-main li{
+    transition: all 0.2s ease-out;
+    display: none;
+    padding-left: 1em;
+}
+.projectV2sidenav{
+    padding-left: 12px;
+    padding-top: 12px;
+    grid-column: 1/2;
+    height: 100%;
+    background-color: #111;
+    grid-row: 2/3;
+}
+.projectV2projects{
+    height: 100%;
+    margin-left: 1em;
+    overflow: auto;
+    background-color: #efefef;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}

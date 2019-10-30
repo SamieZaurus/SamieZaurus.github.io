@@ -13,6 +13,8 @@ import {
   environment
 } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { DuraViewerService } from '../services/dura-viewer.service';
+import { ForgeViewerOptions } from '../models/model';
 export abstract class ViewerEventArgs {
   target?: Autodesk.Viewing.Viewer3D;
   model?: Autodesk.Viewing.ViewerItem;
@@ -35,16 +37,27 @@ export class DuraViewerComponent implements OnInit {
 
   @Output() 
   public onSelectionChanged = new EventEmitter<number[]>();
-  private viewer: Autodesk.Viewing.GuiViewer3D = null;
-  private urn: string = "";
-  constructor(private scriptService: ForgeViewerScriptService, private elem: ElementRef) {}
+
+
+  private viewer: Autodesk.Viewing.Viewer3D = null;
+  private urn: string = '';
+  private _forgeViewerOptions: ForgeViewerOptions;
+  private events: string[] = [
+    'selection',
+    'isolate',
+  ]
+
+  constructor(private scriptService: ForgeViewerScriptService, private elem: ElementRef, private duraViewerService: DuraViewerService) {}
   @Input() public set documentUrn(urn: string){
     this.urn = urn;
   }
-  async ngOnInit() {
+  @Input() public set forgeViewerOptions(options: ForgeViewerOptions){
 
+    this._forgeViewerOptions = options;
     this.initViewer();
 
+  }
+  async ngOnInit() {
 
   }
   private async initViewer() {
@@ -72,10 +85,12 @@ export class DuraViewerComponent implements OnInit {
       }
 
       console.log('Initialization complete, loading a model next...');
-      this.onViewerSucces();
+      // when viewer is iniialized register the viewer to the service
+      this.duraViewerService.registerViewer(this.viewer);
+      this._forgeViewerOptions.onViewerReady({baseComponent: this, viewer: this.viewer});
     });
   }
-  private onViewerSucces(){
+  public loadModel(urn: string){
     Autodesk.Viewing.Document.load(this.urn, (x) => {this.onDocumentLoadSucces(x)}, (x) => {console.log("Something went wrong")});
   }
   private onDocumentLoadSucces(viewerDocument: Autodesk.Viewing.Document){
@@ -86,7 +101,12 @@ export class DuraViewerComponent implements OnInit {
   }
   public registerEvents(){
 
-    this.viewer.addEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, (event) => {this.onSelectionChanged.emit(event.dbIdArray)});
+    for(let event of this.events){
+
+      this.viewer.addEventListener(event, (event) => {this.duraViewerService.setCurrentEvent(this.duraViewerService.castEvent(event))});
+
+    }
+    
 
   }
   private loadScripts(): Promise < void > {

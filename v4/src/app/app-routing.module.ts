@@ -5,12 +5,17 @@ import { AboutComponent } from './about/about.component';
 import { TestgridComponent } from './testgrid/testgrid.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BestellenBimComponent } from './bestellen-bim/bestellen-bim.component';
+import { ProjectsV2Component } from './projects-v2/projects-v2.component';
 
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'viewer',
     component: BestellenBimComponent
+  },
+  {
+    path: '',
+    component: HomeComponent
   },
   {
     path: 'about',
@@ -22,7 +27,7 @@ const routes: Routes = [
   },
   {
     path: 'projects',
-    component: ProjectsComponent
+    component: ProjectsV2Component
   }
 
 

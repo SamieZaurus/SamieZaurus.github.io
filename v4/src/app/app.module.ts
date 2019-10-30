@@ -12,6 +12,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ForgeViewerScriptService } from './services/forgeviewerscript.service';
 import { DuraViewerComponent } from './dura-viewer/dura-viewer.component';
 import { BestellenBimComponent } from './bestellen-bim/bestellen-bim.component';
+import { ProjectsV2Component } from './projects-v2/projects-v2.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BestellenBimComponent } from './bestellen-bim/bestellen-bim.component';
     TestgridComponent,
     ProjectsComponent,
     DuraViewerComponent,
-    BestellenBimComponent
+    BestellenBimComponent,
+    ProjectsV2Component
   ],
   imports: [
     BrowserModule,

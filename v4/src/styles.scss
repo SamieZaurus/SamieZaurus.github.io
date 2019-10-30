@@ -21,7 +21,7 @@ body{
 .dvforgeviewer{
 
     position: relative;
-    height: 50vh;
+    height: 80vh;
 
 }
 .full{
@@ -34,7 +34,7 @@ body{
     display: grid;
     height: 100%;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: max-content 1fr max-content;
     align-items: start;
 }
 .grid-container2{
@@ -131,15 +131,24 @@ i{
     grid-template-columns: 1fr auto auto 1fr;
 }
 .content{
-    grid-column: 1/5;
+    grid-column: 1/13;
     grid-row: 2/3;
     height: 100%;
 }
 .body-content{
     display: grid;
     grid-template-columns: 1fr auto auto 1fr;
-    grid-template-rows: 1fr;
-    align-items: end;
+    grid-template-rows: 1;
+    padding-top: 20vh;
+}
+.viewer-content{
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-auto-rows: 1fr;
+    margin-top: 5vh;
+}
+.viewer{
+    grid-column: 2/3;
 }
 .about-content{
     display: grid;
