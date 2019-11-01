@@ -13,6 +13,9 @@ import { ForgeViewerScriptService } from './services/forgeviewerscript.service';
 import { DuraViewerComponent } from './dura-viewer/dura-viewer.component';
 import { BestellenBimComponent } from './bestellen-bim/bestellen-bim.component';
 import { ProjectsV2Component } from './projects-v2/projects-v2.component';
+import { DefaultProjectComponent } from './projects-v2/project-components/default-project/default-project.component';
+import { AnalyserenComponent } from './projects-v2/project-components/analyseren/analyseren.component';
+import { OntwerpenComponent } from './projects-v2/project-components/ontwerpen/ontwerpen.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { ProjectsV2Component } from './projects-v2/projects-v2.component';
     ProjectsComponent,
     DuraViewerComponent,
     BestellenBimComponent,
-    ProjectsV2Component
+    ProjectsV2Component,
+    DefaultProjectComponent,
+    AnalyserenComponent,
+    OntwerpenComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,45 +1,141 @@
 .projectV2wrapper{
     display: grid;
     height: 100%;
-    padding-top: 0vh;
     grid-template-rows: max-content 1fr;
-    grid-template-columns: 3fr 8fr 1fr;
+    grid-template-columns: max-content 1fr;
     h1{
-        color: #A3368D;
+        color: rgb(201, 110, 68);
     }
+    
 }
 .side-nav-main h5{
 
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding-bottom: 0.2em;
     padding-top: 0.2em;
 
 }
+.projectscontainer{
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding-top: 0em;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: #333;
+
+}
+.active-link{
+    text-decoration: underline;
+    margin-left: 8px;
+    color: rgb(201, 110, 68);
+    font-size: 1.2em;
+}
+.nav-container{
+    height: 100%;
+    position: absolute;
+}
 .side-nav-main{
+    text-decoration: #3836A3;
+    margin-left: 1em;
     padding-bottom: 1em;
     border-bottom: 2px solid #222222;
+    transition: all 0.2s ease-out 0.2s;
+
 }
-.side-nav-main:hover li{
-    display: block;
+.side-nav-main a{
+    transition: all 0.2s ease-out;
+}
+
+.open-arrow{
+
+    transform: rotate(180deg);
+
+}
+.side-nav-main i{
+
+    transition: all 0.2s ease-out 0.4s;
+
 }
 .side-nav-main li{
-    transition: all 0.2s ease-out;
-    display: none;
-    padding-left: 1em;
+    padding: 8px;
+}
+.side-nav-sub{
+    overflow: hidden;
+    color: #efefef;
+    transition: all 0.4s ease-out;
+    max-height: 0px;
+}
+.open{
+    max-height: 250px !important;
 }
 .projectV2sidenav{
-    padding-left: 12px;
     padding-top: 12px;
+    white-space: nowrap;
+    overflow-x: hidden;
     grid-column: 1/2;
-    height: 100%;
-    background-color: #111;
     grid-row: 2/3;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+    // transition: all 0.3s ease-in-out;
+}
+.visible{
+    display: block !important;
+}
+.full-view{
+    grid-column: 1/3 !important;
+    width: 95% !important;
+    height: 95%;
+    position: absolute;
+    
+    margin: auto !important;
+    margin-top: 16px !important;
+    
+}
+.full-view-small{
+    grid-column: 1/3 !important;
+    width: 95% !important;
+    height: 100%;
+    position: absolute;
+    margin: 0px auto 2% auto !important;
+    
+
 }
 .projectV2projects{
-    height: 100%;
-    margin-left: 1em;
+    margin: 0px 2% 2% 2%;
+    border-bottom: 12px solid #3836A3;
+    transform-origin: left top;
+    grid-column: 2/3;
     overflow: auto;
     background-color: #efefef;
-    grid-column: 2/3;
     grid-row: 2/3;
+    position: relative;
+    .toggler{
+        position: sticky;
+        margin-top: 0.2em;
+        margin-left: calc(100% - 50px);
+        z-index: 5;
+        font-size: 2em;
+        
+        i{
+            border-radius: 150px;
+            transform-origin: top right;
+            animation: small-blow-up 1s ease-out 2;
+            color: rgb(201, 110, 68);
+        }
+
+    }
+    .toggler-side-menu{
+
+        i{
+            animation: up-down 0.5s ease-out 2;
+            color: rgb(201, 110, 68);
+        }
+        display: none;
+        position: sticky;
+        font-size: 2em;
+
+    }   
 }

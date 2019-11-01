@@ -6,6 +6,9 @@ import { TestgridComponent } from './testgrid/testgrid.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BestellenBimComponent } from './bestellen-bim/bestellen-bim.component';
 import { ProjectsV2Component } from './projects-v2/projects-v2.component';
+import { DefaultProjectComponent } from './projects-v2/project-components/default-project/default-project.component';
+import { OntwerpenComponent } from './projects-v2/project-components/ontwerpen/ontwerpen.component';
+import { AnalyserenComponent } from './projects-v2/project-components/analyseren/analyseren.component';
 
 
 const routes: Routes = [
@@ -27,7 +30,22 @@ const routes: Routes = [
   },
   {
     path: 'projects',
-    component: ProjectsV2Component
+    component: ProjectsV2Component,
+    children: [
+    { 
+      path: '',
+      component: DefaultProjectComponent
+    },
+    {
+      path: 'ontwerpen',
+      component: OntwerpenComponent
+    },
+    {
+      path: 'analyseren',
+      component: AnalyserenComponent
+    }
+
+    ]
   }
 
 

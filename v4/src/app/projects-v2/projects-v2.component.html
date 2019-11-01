@@ -1,35 +1,79 @@
 <div class="projectV2wrapper">
-    <h1><i class="fas fa-angle-double-right"></i>Projects</h1>
-    <div class="projectV2sidenav">
+    <h1 class="hide-on-fullscreen"><i class="fas fa-angle-double-right"></i>Projects</h1>
+    <div class="projectV2sidenav hide-on-fullscreen">
+        <div class="nav-container">
         <ul class="side-nav-main">
-            <h5>Personal<i class="fas fa-angle-down"></i></h5>
-            <li>Foo</li>
-            <li>Bar</li>
-            <li>Foo</li>
-            <li>Bar</li>
-            <li>Foo</li>
-            <li>Bar</li>
+            <h5 (click)="toggleSubNav($event)">Personal<i class="fas fa-angle-down"></i></h5>
+            <div class="side-nav-sub">
+                <li>Foo</li>
+                <li>Bar</li>
+                <li>Foo</li>
+                <li>Bar</li>
+                <li>Foo</li>
+                <li>Bar</li>
+            </div>
         </ul>
         <ul class="side-nav-main">
-            <h5>Dura Vermeer<i class="fas fa-angle-down"></i></h5>
-            <li>Foo</li>
-            <li>Bar</li>
-            <li>Foo</li>
-            <li>Bar</li>
-            <li>Foo</li>
-            <li>Bar</li>
+            <h5 (click)="toggleSubNav($event)">Dura Vermeer<i class="fas fa-angle-down"></i></h5>
+            <div class="side-nav-sub">
+                <li>Foo</li>
+                <li>Bar</li>
+                <li>Foo</li>
+                <li>Bar</li>
+                <li>Foo</li>
+                <li>Bar</li>
+            </div>
         </ul>
         <ul class="side-nav-main">
-            <h5>Stage Competenties<i class="fas fa-angle-down"></i></h5>
-            <li>Foo</li>
-            <li>Bar</li>
-            <li>Foo</li>
-            <li>Bar</li>
-            <li>Foo</li>
-            <li>Bar</li>
+            <h5 (click)="toggleSubNav($event)">Hogeschool Rotterdam<i class="fas fa-angle-down"></i></h5>
+            <div class="side-nav-sub">
+                <li>Foo</li>
+                <li>Bar</li>
+                <li>Foo</li>
+                <li>Bar</li>
+                <li>Foo</li>
+                <li>Bar</li>
+            </div>
         </ul>
+        <ul class="side-nav-main">
+            <h5 (click)="toggleSubNav($event)">Stage Competenties<i class="fas fa-angle-down"></i></h5>
+            <div class="side-nav-sub">
+                <li><a routerLink="./ontwerpen" routerLinkActive="active-link" routerLinkActiveOptions="{exact: true}" >Ontwerpen</a></li>
+                <li><a routerLink="./managementcontrol" routerLinkActive="active-link" routerLinkActiveOptions="{exact: true}">Management Control</a></li>
+                <li><a routerLink="./managementcontrol" routerLinkActive="active-link" routerLinkActiveOptions="{exact: true}">Adviseren</a></li>
+                <li><a routerLink="./analyseren" routerLinkActive="active-link" routerLinkActiveOptions="{exact: true}">Analyseren</a></li>
+                <li><a routerLink="./managementcontrol" routerLinkActive="active-link" routerLinkActiveOptions="{exact: true}">Realiseren</a></li>
+                <li><a routerLink="./managementcontrol" routerLinkActive="active-link" routerLinkActiveOptions="{exact: true}">Bar</a></li>
+            </div>
+        </ul>
+        <ul class="side-nav-main">
+                <h5 (click)="toggleSubNav($event)">Leerdoelen<i class="fas fa-angle-down"></i></h5>
+                <div class="side-nav-sub">
+                    <li>Foo</li>
+                    <li>Bar</li>
+                    <li>Foo</li>
+                    <li>Bar</li>
+                    <li>Foo</li>
+                    <li>Bar</li>
+                </div>
+            </ul>
+        
     </div>
+</div>
     <div class="projectV2projects">
+        <div class="toggler">
 
+                    <i (click)="toggleFullscreen($event)" class="fas fa-expand"></i>
+        
+        </div>
+        <div class="toggler-side-menu">
+
+                <i (click)="toggleSideNav($event)" class="fas fa-angle-right"></i>
+    
+        </div>
+        <div id="projectsContainer" class="projectscontainer">
+        <router-outlet></router-outlet>
+        
+    </div>
     </div>
 </div>

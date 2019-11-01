@@ -9,6 +9,15 @@
         top: 0px;
     }
 }
+@keyframes small-blow-up{
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
 @keyframes on-off{
     0%{
         opacity: 0;
@@ -42,4 +51,19 @@
     100%{
         color: #1CFF2E;
     }
+}
+@keyframes blow-up{
+
+    0%{
+
+        transform: scale(0.1);
+
+
+    }
+    100%{
+
+        transform: scale(1.0);
+
+    }
+
 }
