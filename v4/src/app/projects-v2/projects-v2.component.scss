@@ -28,7 +28,7 @@
 .active-link{
     text-decoration: underline;
     margin-left: 8px;
-    color: rgb(201, 110, 68);
+    color: #80E2FF;
     font-size: 1.2em;
 }
 .nav-container{
@@ -113,6 +113,7 @@
     animation: fade-in 0.5s ease-out;
     animation-fill-mode: forwards;
 }
+
 .projectV2projects{
     margin: 0px 0% 4% 2%;
     border-left: 2px solid #8CA9FF;
@@ -124,8 +125,8 @@
     position: relative;
     .toggler{
         position: sticky;
-        top: 0.2em;
-        right: 1%;
+        top: 1em;
+        right: 1em;
         float: right;
         z-index: 5;
         i{
@@ -149,8 +150,10 @@
     .toggler-side-menu{
 
         i{
+       
+        
             animation: up-down 0.5s ease-out 2;
-            color: #80E2FF;
+            color: #333333;
             font-size: 2em;
         }
         z-index: 5;
