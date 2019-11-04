@@ -45,6 +45,7 @@ body{
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: max-content 1fr max-content;
     align-items: start;
+    position: relative;
 }
 .blow-up{
 
@@ -80,7 +81,7 @@ i{
     padding-right: 0px;
     grid-row: 1/2;
     justify-self: end;
-    background-color: #141414;
+    border-bottom: 2px solid #7674E8;
 }
 .nav a{
     line-height: 2;
@@ -102,29 +103,18 @@ i{
 
 }
 .nav a:hover{
-    border-bottom: 100% solid #141414;
+
 }
 .on-off{
     animation: on-off 1.2s ease-out 5;
 }
 .nav a:nth-child(1){
     
-    border-bottom: 3px solid#A3368D;
     padding-left: 16px !important;
 }
 .nav a:nth-child(2){
     
-    border-bottom: 3px solid#A3368D;
     padding-left: 16px !important;
-}
-.nav a:nth-child(3){
-    border-bottom: 3px solid#9B39AD;
-}
-.nav a:nth-child(4){
-    border-bottom: 3px solid#5B39AD;
-}
-.nav a:nth-child(5){
-    border-bottom: 3px solid#3836A3;
 }
 .footer{
     grid-column: 1/13;
@@ -132,7 +122,7 @@ i{
     font-size: 1.2em;
     align-self: end;
     padding: 12px;
-    background-color: #141414;
+    border-top: 2px solid #74B0E8;
 }
 .footer i{
     transition: all 0.2s ease-out;
@@ -223,10 +213,12 @@ h1{
     margin-top: 24px;
 }
 .projectscontainer{
-
     h1{
-        width: 100%;
-        border-bottom: 2px solid #3836A3;
+        width: 80%;
+        font-size: 5em;
+        margin-bottom: 2%;
+        color: #74B0E8;
+        border-bottom: 2px solid #333333;
     }
 
 }

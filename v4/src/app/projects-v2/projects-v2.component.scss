@@ -4,7 +4,7 @@
     grid-template-rows: max-content 1fr;
     grid-template-columns: max-content 1fr;
     h1{
-        color: rgb(201, 110, 68);
+        color: #A680FF;
     }
     
 }
@@ -16,14 +16,12 @@
 
 }
 .projectscontainer{
-
+    line-height: 1.60;
     height: 100%;
     width: 100%;
     position: absolute;
-    padding-top: 0em;
-    padding-left: 2%;
-    padding-right: 2%;
-    color: #333;
+
+    color: #202020;
 
 }
 .active-link{
@@ -73,7 +71,7 @@
     max-height: 0px;
 }
 .open{
-    max-height: 250px !important;
+    max-height: 350px !important;
 }
 .projectV2sidenav{
     padding-top: 12px;
@@ -81,8 +79,9 @@
     overflow-x: hidden;
     grid-column: 1/2;
     grid-row: 2/3;
-    height: 100%;
-    overflow-y: auto;
+    min-height: 100%;
+    width: auto;
+    overflow-y: scroll;
     position: relative;
     // transition: all 0.3s ease-in-out;
 }
@@ -108,40 +107,55 @@
     
 
 }
+.fade-in{
+  
+    animation: fade-in 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
 .projectV2projects{
-    margin: 0px 2% 2% 2%;
-    border-bottom: 12px solid #3836A3;
+    margin: 0px 0% 4% 2%;
+    border-left: 2px solid #8CA9FF;
     transform-origin: left top;
     grid-column: 2/3;
     overflow: auto;
-    background-color: #efefef;
     grid-row: 2/3;
+    color: #efefef;
     position: relative;
     .toggler{
         position: sticky;
         top: 0.2em;
-        margin-left: calc(100% - 50px);
+        right: 1%;
+        float: right;
         z-index: 5;
-        font-size: 2em;
-        
         i{
+            font-size: 2em;
             border-radius: 150px;
             transform-origin: top right;
-            animation: small-blow-up 1s ease-out 2;
-            color: rgb(201, 110, 68);
+            // animation: small-blow-up 1s ease-out 2;
+            color: #80E2FF;
+            background-color: #333333;
+            padding: 12px;
         }
+        .tooltip{
+            position: absolute;
+            right: 4em;
+            top: 0px;
+
+        }
+ 
 
     }
     .toggler-side-menu{
 
         i{
             animation: up-down 0.5s ease-out 2;
-            color: rgb(201, 110, 68);
+            color: #80E2FF;
+            font-size: 2em;
         }
+        z-index: 5;
         display: none;
         position: sticky;
-        top: 0.2em;
-        font-size: 2em;
+        
 
     }   
 }

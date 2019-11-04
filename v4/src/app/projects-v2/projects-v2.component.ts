@@ -20,23 +20,24 @@ export class ProjectsV2Component implements OnInit {
 
   }
   public toggleSubNav(event: any){
-    console.log(event);
-    let sideNavMain: HTMLElement = event.srcElement.parentElement;
-    let sideNavSub: HTMLElement = event.srcElement.nextSibling;
-    let sideNavMainArrow: HTMLElement = event.srcElement.firstElementChild;
+    let srcElement = event.srcElement;
+    if(srcElement.tagName == 'I'){
+      srcElement = srcElement.parentElement;
+    }
+    let sideNavMain: HTMLElement = srcElement.parentElement;
+    let sideNavSub: HTMLElement = srcElement.nextSibling;
+    let sideNavMainArrow: HTMLElement = srcElement.firstElementChild;
     sideNavSub.classList.toggle('open');
     sideNavMain.classList.toggle('active-category');
     sideNavMainArrow.classList.toggle('open-arrow');
   }
   public toggleSideNav(event: any){
-
     let sideNav: Element = document.getElementsByClassName('projectV2sidenav')[0];
     let projects = document.getElementsByClassName('projectV2projects')[0];
     sideNav.classList.toggle('non-display');
     
   }
   public toggleFullscreen(event: any){
-
     let nav = document.getElementById('nav');
     let footer = document.getElementById('footer');
     let elems = document.getElementsByClassName('hide-on-fullscreen');
