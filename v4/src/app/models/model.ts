@@ -22,10 +22,18 @@ export class IsolateEvent extends ForgeViewerEvent{
 export interface ForgeViewerOptions{
 
     onViewerReady: (args: ViewerInitArgs) => void;
+    viewerEvents: string[];
 }
 export interface ViewerInitArgs{
 
     baseComponent: DuraViewerComponent;
     viewer: Autodesk.Viewing.Viewer3D;
+
+}
+export enum ForgeViewerEventName{
+
+    selectionChanged = "selection",
+    isolate = "isolate",
+    objectTreeCreated = "objectTreeCreated",
 
 }

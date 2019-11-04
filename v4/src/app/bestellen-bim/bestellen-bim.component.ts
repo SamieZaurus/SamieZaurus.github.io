@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DuraViewerService } from '../services/dura-viewer.service';
 import { Subscription } from 'rxjs';
-import { ForgeViewerEvent, SelectionChangedEvent, IsolateEvent, ForgeViewerOptions, ViewerInitArgs } from '../models/model';
+import { ForgeViewerEvent, SelectionChangedEvent, IsolateEvent, ForgeViewerOptions, ViewerInitArgs, ForgeViewerEventName } from '../models/model';
 
 @Component({
   selector: 'app-bestellen-bim',
@@ -21,7 +21,8 @@ export class BestellenBimComponent implements OnInit {
   ngOnInit() {
     this.forgeViewerOptions = {
       // We can do this.setUrn.bind(this)  instead to expose functions of this component to setUrn, the scope is normally situated at the base component.
-      onViewerReady: this.setUrn
+      onViewerReady: this.setUrn,
+      viewerEvents: [ForgeViewerEventName.selectionChanged, ForgeViewerEventName.objectTreeCreated, ForgeViewerEventName.isolate]
     }
     // subscribe to events fired by the viewer
     this.eventSubscription = this.duraViewerService.$events.subscribe((item) => {this.fireEvent(item)})

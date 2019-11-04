@@ -27,6 +27,16 @@ export class SelectionChangedEventArgs extends ViewerEventArgs {
   nodeArray: number[];
   type = Autodesk.Viewing.SELECTION_CHANGED_EVENT;
 }
+export class OnIsolateEventArgs extends ViewerEventArgs{
+
+  nodeIdArray: number[];
+  type = Autodesk.Viewing.ISOLATE_EVENT;
+}
+export class OnObjectTreeCreatedEventArgs extends  ViewerEventArgs{
+
+  type= Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT;
+
+}
 @Component({
   selector: 'dura-viewer',
   templateUrl: './dura-viewer.component.html',
@@ -37,15 +47,12 @@ export class DuraViewerComponent implements OnInit {
 
   @Output() 
   public onSelectionChanged = new EventEmitter<number[]>();
+  public onIsolate = new EventEmitter<number[]>();
 
 
   private viewer: Autodesk.Viewing.Viewer3D = null;
   private urn: string = '';
   private _forgeViewerOptions: ForgeViewerOptions;
-  private events: string[] = [
-    'selection',
-    'isolate',
-  ]
 
   constructor(private scriptService: ForgeViewerScriptService, private elem: ElementRef, private duraViewerService: DuraViewerService) {}
   @Input() public set documentUrn(urn: string){
@@ -102,9 +109,13 @@ export class DuraViewerComponent implements OnInit {
   public registerEvents(){
 
       // this.viewer.addEventListener(event, (event) => {this.duraViewerService.setCurrentEvent(this.duraViewerService.castEvent(event))});
-      this.viewer.addEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, (event) => {console.log(event.dbIdArray); this.onSelectionChanged.emit(event.dbIdArray)});
+      this._forgeViewerOptions.viewerEvents.forEach((event) => {
 
-  }
+        this.viewer.addEventListener(event, (viewerEvent) => {console.log(event);});
+
+      })
+      
+  } 
   private loadScripts(): Promise < void > {
 
     return this.scriptService.load('https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js');
