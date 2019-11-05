@@ -1,5 +1,5 @@
 <div class="projectV2wrapper">
-    <h1 class="hide-on-fullscreen"><i class="fas fa-angle-double-right"></i>Projects</h1>
+    <h1 class="hide-on-fullscreen"><i class="fas fa-angle-double-right flip-down-on-select"></i>Projects</h1>
     <div class="projectV2sidenav">
         <div class="nav-container">
         <ul class="side-nav-main">
@@ -61,9 +61,9 @@
     </div>
 </div>
     <div class="projectV2projects">
-        <div class="toggler">
+        <div (click)="toggleFullscreen($event)"  class="toggler">
 
-                    <i (click)="toggleFullscreen($event)" class="fas fa-expand">
+                    <i class="fas fa-expand">
                         
                     </i>
                     <!-- <div class="tooltip">Go to fullscreen</div> -->

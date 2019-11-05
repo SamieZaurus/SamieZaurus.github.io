@@ -16,12 +16,14 @@ export class BestellenBimComponent implements OnInit {
 
   public selectedItems: number[];
 
+  public forgeDocumentUrn: string = "";
+
   constructor(private duraViewerService: DuraViewerService) { }
 
   ngOnInit() {
     this.forgeViewerOptions = {
       // We can do this.setUrn.bind(this)  instead to expose functions of this component to setUrn, the scope is normally situated at the base component.
-      onViewerReady: this.setUrn,
+      onViewerReady: (x) => {alert('testing')},
       viewerEvents: [ForgeViewerEventName.selectionChanged, ForgeViewerEventName.objectTreeCreated, ForgeViewerEventName.isolate]
     }
     // subscribe to events fired by the viewer
@@ -30,12 +32,6 @@ export class BestellenBimComponent implements OnInit {
   ngOnDestroy(){
 
     this.eventSubscription.unsubscribe();
-
-  }
-  public setUrn(args: ViewerInitArgs){
-    let urn = 'urn:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLmFMQk9yNEhqUjF5NHI0U3JtU1Z5anc_dmVyc2lvbj0x';
-    args.baseComponent.documentUrn = urn;
-    args.baseComponent.loadModel(urn);
 
   }
   public displayItems(items: number[]){

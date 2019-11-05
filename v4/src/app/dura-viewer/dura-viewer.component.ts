@@ -56,12 +56,12 @@ export class DuraViewerComponent implements OnInit {
 
   constructor(private scriptService: ForgeViewerScriptService, private elem: ElementRef, private duraViewerService: DuraViewerService) {}
   @Input() public set documentUrn(urn: string){
-    this.urn = urn;
+    console.log(urn);
   }
   @Input() public set forgeViewerOptions(options: ForgeViewerOptions){
 
     this._forgeViewerOptions = options;
-    this.initViewer();
+    //this.initViewer();
 
   }
   async ngOnInit() {

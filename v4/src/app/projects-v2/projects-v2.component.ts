@@ -36,13 +36,16 @@ export class ProjectsV2Component implements OnInit {
     let projects = document.getElementsByClassName('projectV2projects')[0];
     sideNav.classList.toggle('non-display');
     
+    
   }
   public toggleFullscreen(event: any){
+    console.log("log");
     let nav = document.getElementById('nav');
     let footer = document.getElementById('footer');
     let elems = document.getElementsByClassName('hide-on-fullscreen');
     let navToggler = document.getElementsByClassName('toggler-side-menu')[0];
     let sideNav: Element = document.getElementsByClassName('projectV2sidenav')[0];
+    let projects: Element = document.getElementsByClassName('projectV2projects')[0];
     navToggler.classList.toggle('visible');
     nav.classList.toggle('non-display');
     footer.classList.toggle('non-display');
@@ -50,18 +53,20 @@ export class ProjectsV2Component implements OnInit {
       if(footer.classList[1]){
         elems[x].classList.add('non-display');
         sideNav.classList.add('non-display');
+        
       }
       else{
+        
         sideNav.classList.remove('non-display');
         elems[x].classList.remove('non-display');
       }
       
 
-    }
-    event.srcElement.classList.toggle('fa-expand');
-    event.srcElement.classList.toggle('fa-compress');
-    event.srcElement.parentElement.parentElement.classList.toggle('top-margin');
-    event.srcElement.parentElement.parentElement.classList.toggle('blow-up');
+    } 
+  
+   
+    projects.classList.toggle('fullscreen-project')
+    projects.classList.toggle('blow-up');
     
   }
 }

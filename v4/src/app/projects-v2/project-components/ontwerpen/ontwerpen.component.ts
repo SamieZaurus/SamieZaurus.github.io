@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioRoutingService } from 'src/app/services/portfolio-routing-service';
+
 
 @Component({
   selector: 'app-ontwerpen',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OntwerpenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _routingService: PortfolioRoutingService) {}
 
   ngOnInit() {
+    this._routingService.registerRoutes();
   }
 
 }
