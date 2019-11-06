@@ -150,15 +150,7 @@ i{
     grid-template-rows: 1;
     padding-top: 20vh;
 }
-.viewer-content{
-    display: grid;
-    grid-template-columns: 1fr 80% 1fr;
-    grid-auto-rows: 1fr;
-    margin-top: 5vh;
-}
-.viewer{
-    grid-column: 2/3;
-}
+
 .about-content{
     display: grid;
     grid-template-columns: 1fr;

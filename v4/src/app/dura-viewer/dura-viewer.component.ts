@@ -56,8 +56,12 @@ export class DuraViewerComponent implements OnInit {
 
   constructor(private scriptService: ForgeViewerScriptService, private elem: ElementRef, private duraViewerService: DuraViewerService) {}
   @Input() public set documentUrn(urn: string){
-    console.log(urn);
-  }
+    this.urn = urn;
+    if(urn){
+      this.loadModel();
+
+    }
+    }
   @Input() public set forgeViewerOptions(options: ForgeViewerOptions){
 
     this._forgeViewerOptions = options;
@@ -65,11 +69,12 @@ export class DuraViewerComponent implements OnInit {
 
   }
   async ngOnInit() {
+    await this.loadScripts();
+    this.initViewer();
 
   }
   private async initViewer() {
 
-    await this.loadScripts();
 
     var options = {
       env: 'AutodeskProduction',
@@ -95,9 +100,10 @@ export class DuraViewerComponent implements OnInit {
       // when viewer is iniialized register the viewer to the service
       this.duraViewerService.registerViewer(this.viewer);
       this._forgeViewerOptions.onViewerReady({baseComponent: this, viewer: this.viewer});
+      
     });
   }
-  public loadModel(urn: string){
+  public loadModel(){
     Autodesk.Viewing.Document.load(this.urn, (x) => {this.onDocumentLoadSucces(x)}, (x) => {console.log("Something went wrong")});
   }
   private onDocumentLoadSucces(viewerDocument: Autodesk.Viewing.Document){

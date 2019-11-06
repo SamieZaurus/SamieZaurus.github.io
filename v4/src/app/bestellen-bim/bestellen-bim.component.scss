@@ -1,0 +1,19 @@
+.viewer-content{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1;
+    margin-top: 5vh;
+    width: 100%;
+}
+.viewer{
+    grid-column: 2/3;
+}
+.viewer-side-nav{
+    grid-row: 1/2;
+    min-width: 200px;
+    background-color: #bdffc0;
+    grid-column: 1/2;
+}
+.viewer:hover + .viewer-side-nav{
+    display: none;
+}

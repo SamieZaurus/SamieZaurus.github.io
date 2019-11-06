@@ -1,7 +1,9 @@
 <div class="viewer-content">
     <div class="viewer">
-<dura-viewer [forgeViewerOptions]="forgeViewerOptions" [documentUrn]="forgeDocumentUrn" (onSelectionChanged)="displayItems($event)"></dura-viewer>
-<p *ngIf="selectedItems">{{selectedItems}}</p>
-<button (click)="setUrn2()">Test</button>
-</div>
+        <dura-viewer [forgeViewerOptions]="forgeViewerOptions" [documentUrn]="forgeDocumentUrn"
+            (onSelectionChanged)="displayItems($event)"></dura-viewer>
+    </div>
+    <div class="viewer-side-nav">
+        
+    </div>
 </div>
